@@ -1,0 +1,7 @@
+# Guest attach USB loop for Ubuntu on Hyper-V
+while true; do
+  if sudo usbip attach --remote=172.21.160.1 --busid=2-6 2>/dev/null; then
+    echo "[$(date '+%H:%M:%S')] Jetson Attached!"
+  fi
+  sleep 1
+done
